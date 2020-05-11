@@ -1,0 +1,40 @@
+.head{
+    text-align: center;
+    color: #462c22;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    font-size:95px;
+    margin-top:20%;
+    margin-left:0%
+}
+.button{
+    text-decoration-line: none;
+    box-sizing: border-box;
+    width:500px;
+    height:50px;
+    border-radius: 10px;
+    background-color: #462c22;
+    color: #ffffff;
+    text-align: center;
+    padding-top:12px;
+    font-family:'Montserrat', sans-serif;
+    font-size:20px
+}
+.head2{
+    text-align: center;
+    color: #462c22;
+    font-family: 'Varela Round', sans-serif;
+    letter-spacing: 2px;
+    font-size:70px;
+    
+  
+}
+.head3{
+    text-align: center;
+    color: #462c22;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    font-size:20px;
+    margin-top: 8%;
+    
+}

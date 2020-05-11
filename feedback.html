@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Feedback</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- #To ensure proper rendering and touch zooming--> 
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="gen_validatorv4.js"></script>
+       <!---For Navigation Bar-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+        <script>
+         function validateform()
+        {
+          var a = new Validator("form2");
+          
+          a.addValidation("fullname","alpha","Alphabetic Chars Only for Fullname!!");
+          a.addValidation("email","maxlen==50","Must be 50 Chars long");
+          a.addValidation("age","maxlen==3","Please enter Correct age");
+          a.addValidation("phone","maxlen==12","Please Enter Valid Phone number");          
+        }
+
+        
+        
+
+        
+
+        </script>
+        
+        <style>
+            body{
+                background-image: url("images/texture.jpg");
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+                
+            }
+            .container
+            {
+                font-family: 'Jost', sans-serif;
+            }
+
+            .radio
+            {
+                margin: 0px 40px 20px 0px;
+            }
+           
+
+            .text
+            {
+               height:40px;
+               border-radius: 5px;
+               padding-left: 10px;
+               font-size: 14px;
+               border: none;
+               width: 100%;
+               color: #000;
+            }
+
+
+        </style>
+        <script src="bootstrap.min.js"></script>
+    </head>
+
+    <body>
+
+        <header>
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark pb-3 ">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34px" height="42px" > <image  x="0px" y="0px" width="34px" height="42px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAqCAQAAAB8HUEkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkBQsMNwzOS+4+AAADxklEQVRIx53VXWjWZRjH8c/z35abm+nc2np0GjMDnR4IlSGkEGQ08eVAJKgIDzxwJkWYJyJEhkEYQWFJ6IlhB0EedCCTGRiVMMwQiTIpmi/zddNH9+bL9uzp4Lmf//6Pm251/U9+131f9/e+7ut++aeMbdMs97QFZivHHef97ldH3DRBW2KfXrkxvl77LBkfUO/AmMOT3wH1D0OscGVcRE7OFSuSw1IJ/ZZPi5AX/eGq66hRr8nMot63fTYassnniZAjWp2WcVsZBlWoNl+z5YmYN31RDHneT3HneR/7UZlqZUpCW9agjEHLvGt2HPmCH0YgFc55LHQct023BiVy91UsJatTrQ8tDi3XzXJbmOkjL4bm32wyqOEBhU+pltHqubA/k1Voy2dS73LIqMdrutUbfsgORq6q9bVHQU7a1QgtcWX26FD3UATD6nTYE+fWks/kL3PBP95QaVJRDW4ZwGRTi2p0V7+vzAF/eyqyMCA4pEd5HFiiX5dFNthgkS798U5RrsehoOdaWBpXetgJ0+PZUvoM2mZN8L/ziT6TQ3/OdCcMi8DiSFMI63ApkcewjM0xgjU2yySqVe6SjqCbIjOCvGAgkKHPPOuKCrrOPH2JxQ44H/SMSG2QAwYTkAHzR+3LfAMJb8jdoGojpfECkie0JDHrSHYlCW/k1pVGbgRZoSyBqXJSTxGix0lVRZDC9DciZ4Oco1I2UbiMXUWQXTKJwmdVeTLos6VOBdnoCX+aHs9T57Cs1zWiwwFHPC4V59pnnsagT5U6GtOXOq4mPgmRtO+dUI2Mm9IJREqPpfG4o5FO7cFpVq8/LlgOaSnduqWkQ0se0a9ec/DadUbYG9w6q1wrqkPOJJUqTbrvbblmlbqg9+Y3qtTlcFp6vaJP9ajnKGkpGVW+MQV0SxuKMGRHCJiiRSaxR2NZVkZLQLDDUOHIlLggHZq3atP4wDcl0uGlePMvmyUrHPSs9XHYdg26EhegGNGlwfbYX5/PuhDc5mBQU+10T+8YmEive3aaGvyD2gplKli5C/FlPOh9Mz1SVOCUey56z9rgd5vlToFesDtWx3qtjc7JJqZIyTpnY4xgdQGh6F52uuXloJ9108+mhUlShp31qi1x7Du+HRmYhNAu7Zmgl+nwi2kiKcM6NPsgjvsyUdwx7XDi77/FAiuttMCWROth41qZ9sSArZo02ZpoaVc2PoRHnSnCJBFnwp9vAlZThEkiaiaKyGNOj0Kc/m+I/KKOFSGOTXwhSYu0xojWB9ymCdl+OTn7/z8gb7vtHi/kX1JdaP8UiYWJAAAAAElFTkSuQmCC" />
+              </svg>
+                <a class="navbar-brand" href="#">Trip Management</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Hotels.html">Hotels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Restaurant.html">Restaurants</a>
+                      </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Thingstodo.html">Things To Do</a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                      <a class="nav-link dropdown-toggle mr-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ...More
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="sitemap.html">Sitemap</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="feedback.html">Feed back</a>
+                      </div>
+                    </li>
+
+                    
+                    
+                  </ul>
+                  
+                </div>
+              </nav>
+        </header>
+
+        <div class="container text-capitalize pt-3 mt-4">
+         <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">  
+             <h1 class="text-center text-white pt-5"> Feedback</h1>
+             <hr class="w-25 mx-auto  text-center m-danger bg-dark">
+             <h5 class="text-center"> Please write your feedback below!!</h5>
+
+              <h3 class="mt-3 mb-5">How do you rate your overall experience?</h3>
+
+              <form name="form1">
+                  <label >Bad
+                  <input type="radio" class="radio" name="experience" value="bad">
+                  </label>
+
+                  <label >Average
+                    <input type="radio"  class="radio" name="experience" value="average">
+                    </label>
+
+                    <label >Good
+                        <input type="radio"  class="radio" name="experience" value="good">
+                        </label>
+             </form>
+               </div>
+               </div>         
+                 
+          
+
+ 
+               <form name="form2">
+                
+            <div class="row">        
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+            <label class=" text-white">Full Name:<br></label>
+            <input type="text" class="text" name="fullname" required="" placeholder=" Fullname">
+            </div>
+
+
+            <div class="col-md-4">
+             <label class="col-md-4 text-white">Email:<br></label>
+             <input type="text" class="text" name="email" required=""  placeholder="Email here">
+             </div>
+           </div>
+        
+        <div class="row">
+            <div class="col-md-2"></div>
+            <label class="col-md-4 text-white">Age:<br>
+            <input type="number" class="text" name="age" required="" placeholder=" 25">
+             </label>
+
+             <label class="col-md-4 text-white">Phone<br>
+             <input type="number" name="phone" class="text"  required="" placeholder="+91234567">
+             </label>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <label class="col-md-8 text-white">Message:<br>
+            <textarea id="message" required="" placeholder="Write your Message here" cols="72" rows="7"></textarea>    
+            </label>
+
+        </div>
+         
+        <div class="row">
+         <div calss="col-md-2"></div>
+         <button class="btn btn-primary mb-5" style="width:50%;position:absolute;margin-left: 15%;" onclick="validateform()">
+         submit
+        </button>
+        </div>
+
+          </form>
+        </div>
+
+
+             
+        
+
+        
+    </body>
+</html>

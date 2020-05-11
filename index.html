@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title> 
+          Trip Management
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- #To ensure proper rendering and touch zooming--> 
+        <link rel="icon" href="images\pointer.jpg">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href ="css/ext.css">
+        <script src="gen_validatorv4.js"></script>
+
+        <script type="text/javascript">
+
+        function validateform()
+        {
+          var a = new Validator("form1");
+          
+          a.addValidation("firstname","alpha","Alphabetic Chars Only for Firstname!!");
+          a.addValidation("lastname","alpha","Alphabetic Chars Only for Lastname!!");
+          a.addValidation("email","maxlen==50","Enter Valid Email Address");
+          a.addValidation("password","alphanumeric","Alphanumeric Chars Only for Password!!");   
+        }
+
+        function validate()
+        {
+          var b = new Validator("form2");
+          b.addValidation("email","email","Enter Valid Email Address");
+          b.addValidation("password","alphanumeric","Alphanumeric Chars Only for Password!!");
+
+        }
+        </script>
+        
+
+          
+
+    <body>
+
+
+        <header>
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark pb-3 ">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34px" height="42px" > <image  x="0px" y="0px" width="34px" height="42px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAqCAQAAAB8HUEkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkBQsMNwzOS+4+AAADxklEQVRIx53VXWjWZRjH8c/z35abm+nc2np0GjMDnR4IlSGkEGQ08eVAJKgIDzxwJkWYJyJEhkEYQWFJ6IlhB0EedCCTGRiVMMwQiTIpmi/zddNH9+bL9uzp4Lmf//6Pm251/U9+131f9/e+7ut++aeMbdMs97QFZivHHef97ldH3DRBW2KfXrkxvl77LBkfUO/AmMOT3wH1D0OscGVcRE7OFSuSw1IJ/ZZPi5AX/eGq66hRr8nMot63fTYassnniZAjWp2WcVsZBlWoNl+z5YmYN31RDHneT3HneR/7UZlqZUpCW9agjEHLvGt2HPmCH0YgFc55LHQct023BiVy91UsJatTrQ8tDi3XzXJbmOkjL4bm32wyqOEBhU+pltHqubA/k1Voy2dS73LIqMdrutUbfsgORq6q9bVHQU7a1QgtcWX26FD3UATD6nTYE+fWks/kL3PBP95QaVJRDW4ZwGRTi2p0V7+vzAF/eyqyMCA4pEd5HFiiX5dFNthgkS798U5RrsehoOdaWBpXetgJ0+PZUvoM2mZN8L/ziT6TQ3/OdCcMi8DiSFMI63ApkcewjM0xgjU2yySqVe6SjqCbIjOCvGAgkKHPPOuKCrrOPH2JxQ44H/SMSG2QAwYTkAHzR+3LfAMJb8jdoGojpfECkie0JDHrSHYlCW/k1pVGbgRZoSyBqXJSTxGix0lVRZDC9DciZ4Oco1I2UbiMXUWQXTKJwmdVeTLos6VOBdnoCX+aHs9T57Cs1zWiwwFHPC4V59pnnsagT5U6GtOXOq4mPgmRtO+dUI2Mm9IJREqPpfG4o5FO7cFpVq8/LlgOaSnduqWkQ0se0a9ec/DadUbYG9w6q1wrqkPOJJUqTbrvbblmlbqg9+Y3qtTlcFp6vaJP9ajnKGkpGVW+MQV0SxuKMGRHCJiiRSaxR2NZVkZLQLDDUOHIlLggHZq3atP4wDcl0uGlePMvmyUrHPSs9XHYdg26EhegGNGlwfbYX5/PuhDc5mBQU+10T+8YmEive3aaGvyD2gplKli5C/FlPOh9Mz1SVOCUey56z9rgd5vlToFesDtWx3qtjc7JJqZIyTpnY4xgdQGh6F52uuXloJ9108+mhUlShp31qi1x7Du+HRmYhNAu7Zmgl+nwi2kiKcM6NPsgjvsyUdwx7XDi77/FAiuttMCWROth41qZ9sSArZo02ZpoaVc2PoRHnSnCJBFnwp9vAlZThEkiaiaKyGNOj0Kc/m+I/KKOFSGOTXwhSYu0xojWB9ymCdl+OTn7/z8gb7vtHi/kX1JdaP8UiYWJAAAAAElFTkSuQmCC" />
+              </svg>
+                <a class="navbar-brand" href="#">Trip Management</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Hotels.html">Hotels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Restaurant.html">Restaurants</a>
+                      </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Thingstodo.html">Things To Do</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle mr-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ...More
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="sitemap.html">Sitemap</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="feedback.html">Feed back</a>
+                      </div>
+                    </li> 
+
+                    
+                    
+                  </ul>
+                  
+                </div>
+              </nav>
+
+
+
+        </header>
+
+        
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+          
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images\1.jpg" alt="">
+                <div class = "carousel-caption">
+                  <h1> Hotels</h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images\2.jpg" alt="Hotel">
+                <div class = "carousel-caption">
+                  <h1> Restaurants</h1>
+                </div>
+
+              </div>
+              <div class="carousel-item">
+                <img src="images\5.jpg" alt="">
+                <div class = "carousel-caption">
+                  <h1> Places To Visit</h1>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          
+          </div>
+
+          <section>
+           
+            <div class="container-fluid">
+              <h1 class="text-center text-capitalize pt-5">About Us</h1>
+              <hr class="w-25 mx-auto mb-5">
+
+              <div div class="row mb-5">
+                <div class="col-lg-6 col-md-6 col-12">
+                  <img src ="images\4.jpg" class = " rounded float-left img-fluid">
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12">
+
+                  <h2 class="text-center text-capitalize">our mission</h2>
+                  <hr class="w-25 mx-auto">
+
+                  <p> trip Management helps nearly a half a billion travellers each month make every trip their best trip<br>
+                    Use the trip Management site and app to browse hundreds of millions of reviews and opinions of accommodations, restaurants, experiences, airlines and cruises<br>
+                    Whether planning or on a trip, travellers turn to trip Management to compare low prices on hotels, flights and cruises, book popular tours and attractions, as well as reserve tables at great restaurants</p>
+                </div>
+
+                
+              </div>
+
+              
+          </div>  
+
+
+
+          <div class ="container-fluid">
+            <h1 class="text-center text-capitalize pt-5">Our Partners</h1>
+              <hr class="w-25 mx-auto mb-5">
+          
+
+              <div class ="row">
+                <div class = "col-lg-3 col-md-3 col-12">
+                  <div class="card" style="width:320px;height:370px">
+                    <img class="card-img-top" src="images\Avinash.jpg" style="width:320px;height:250px" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">Avinash Kesineni</h4>
+                      <p class="card-text">A Destination For The New Millennium.</p>
+                     
+                    </div>
+                  </div>
+                 
+                </div>
+
+                <div class = "col-lg-3 col-md-3 col-12">
+                  <div class="card" style="width:320px;height:370px">
+                    <img class="card-img-top" src="images\sakeeth.jpeg" style="width:320px;height:250px" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">Kopparapu Sakeet</h4>
+                      <p class="card-text">Best Places to visit in Manchester of South India</p>
+                      
+                    </div>
+                  </div>
+                 
+                </div>
+
+                <div class = "col-lg-3 col-md-3 col-12">
+                  <div class="card" style="width:320px ;height:370px">
+                    <img class="card-img-top" src="images\KJ.jpeg" style="width:320px;height:250px" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">Krishna Jyothir</h4>
+                      <p class="card-text">The Best Restaurants In Town</p>
+                      
+                    </div>
+                  </div>
+                 
+                </div>
+
+                <div class = "col-lg-3 col-md-3 col-12">
+                  <div class="card" style="width:320px;height:370px">
+                    <img class="card-img-top" src="images\sudarshan.jpg" style="width:320px;height:250px" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title">Sudarshan</h4>
+                      <p class="card-text">Hotels you can afford any time of the year</p>
+                      
+                    </div>
+                  </div>
+                 
+                </div>
+
+              </div>
+
+              
+              <div>
+
+
+              </div>
+            </div>  
+          </section>
+
+          <section>
+            <article class="mt-5 mb-5">
+              <div class="container-fluid text-center bg-primary text-white">
+                <h3 class=" text-capitalize pt-5">For better service contact us through
+                </h3>
+                <h3 class="pb-2"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 17.47c-.88-.07-1.75-.22-2.6-.45l-1.19 1.19c1.2.41 2.48.67 3.8.75v-1.49zM6.99 7.59c-.24-.83-.39-1.7-.45-2.59h-1.5c.09 1.32.35 2.59.75 3.8l1.2-1.21z" opacity=".3"/><path d="M3 4c0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.49c0-.55-.45-1-1-1-1.24 0-2.45-.2-3.57-.57-.1-.04-.21-.05-.31-.05-.26 0-.51.1-.71.29l-2.2 2.2c-2.83-1.45-5.15-3.76-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1zm13.4 13.02c.85.24 1.72.39 2.6.45v1.49c-1.32-.09-2.59-.35-3.8-.75l1.2-1.19zM6.54 5c.06.89.21 1.76.45 2.59l-1.2 1.2c-.41-1.2-.67-2.47-.76-3.79h1.51z"/>
+                </svg>+914023810380</h3>
+
+                <h3 class="pb-3"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 11l8-5H4zM4 8v10h16V8l-8 5z" opacity=".3"/><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
+                </svg> info@Tripmanagement.com</h3>
+               
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDZNzVFhsDSNJZjfBTgtxnNnjxvxxCtCQthdSHXSdFLQJpGwHsWPFrCDtGgcBRTnsJJtjvh" target="_blank">
+                <button class="btn btn-warning" style="text-decoration: none;" >
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 11l8-5H4zM4 8v10h16V8l-8 5z" opacity=".3"/><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/></svg>
+                  Email now</button>
+                  </a>
+
+                  <button class="btn btn-warning"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 17.47c-.88-.07-1.75-.22-2.6-.45l-1.19 1.19c1.2.41 2.48.67 3.8.75v-1.49zM6.99 7.59c-.24-.83-.39-1.7-.45-2.59h-1.5c.09 1.32.35 2.59.75 3.8l1.2-1.21z" opacity=".3"/><path d="M3 4c0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.49c0-.55-.45-1-1-1-1.24 0-2.45-.2-3.57-.57-.1-.04-.21-.05-.31-.05-.26 0-.51.1-.71.29l-2.2 2.2c-2.83-1.45-5.15-3.76-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1zm13.4 13.02c.85.24 1.72.39 2.6.45v1.49c-1.32-.09-2.59-.35-3.8-.75l1.2-1.19zM6.54 5c.06.89.21 1.76.45 2.59l-1.2 1.2c-.41-1.2-.67-2.47-.76-3.79h1.51z"/>
+                  </svg> Call us now</button>
+
+              </div>
+            </article>
+          </section>
+
+          <section>
+             <div class="container">
+               <h1 class="text-center text-capitalize">Gallery</h1>
+               <hr class="w-25 mx-auto pb-3">
+
+               <div class="row pb-5">
+                <div class="col-lg-4 col-md-4 col-12">
+                  <img src="images\isha.png" alt="isha"class="i">
+                </div>   
+
+                <div class="col-lg-4 col-md-4 col-12">
+                  <img src="images\sunrise.png" alt="sunrise"class="i">
+                </div>   
+
+                <div class="col-lg-4 col-md-4 col-12">
+                  <img src="images\temple.jpg" alt="temple"class="i">
+                </div>   
+               </div>
+
+               <div class="row pb-5">
+                <div class="col-lg-4 col-md-4 col-12" style="width: 450px;height: 225px;">
+                  <img src="images\art.png" alt="art"class="i">
+                </div>   
+
+                <div class="col-lg-4 col-md-4 col-12">
+                  <img src="images\indira.jpg" alt="way"class="i">
+                </div>   
+
+                <div class="col-lg-4 col-md-4 col-12">
+                  <img src="images\park.jpg" alt="tea"class="i">
+                </div>   
+               </div>
+             </div>
+
+          </section>
+
+
+          <section class="bg-success">
+           <article>
+             <div class="container-fluid text-center">
+                 <h1 class="text-capitalize pt-5 display-4 text-white"> Register here</h1>
+                 <button class="btn btn-primary text-white" data-toggle="modal" data-target="#myModal">  
+                  Join Now
+                 </button>
+                 <button class="btn btn-primary text-white" data-toggle="modal" data-target="#Modal">  
+                  Login Now
+                 </button><br>
+                  <p class="ml-5 pl-5 pb-3"> If you Already Have an Account?</p>
+
+
+                 <div class="modal" id="myModal">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Sign Up</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <form  name = "form1" method="POST" action="index.html">
+                          <div class="form-group">
+                            <label for="firstname">First Name:</label>
+                            <input type="text" class="form-control" name="firstname" placeholder="Enter First Name" id="email">
+                          </div>
+                          <div class="form-group">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" class="form-control" name="lastname" placeholder="Enter Last Name" id="pwd">
+                          </div>
+                        
+                            <div class="form-group">
+                              <label for="email">Email address:</label>
+                              <input type="email" class="form-control" name="email" placeholder="Enter Email" id="email">
+                            </div>
+                            <div class="form-group">
+                              <label for="pwd">Password:</label>
+                              <input type="password" class="form-control" name="password" placeholder="Enter password" id="pwd">
+                            </div>
+
+                            <div class="form-group form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox"> Terms & Conditions
+                              </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary" onclick="validateform()">Signup</button>
+                      
+                        </form>  
+
+                
+                        
+                      </div>
+                
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+
+                <!--Another Modal-->
+
+                <div class="modal" id="Modal">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Log in</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        <form name = "form2" method="POST" action="index.html">
+                          <div class="form-group">
+                            <label for="email">Email address:</label>
+                            <input type="email" class="form-control" name="email"  placeholder="Enter email" id="email">
+                          </div>
+                          <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" name="password" placeholder="Enter password" id="pwd">
+                          </div>
+                          <div class="form-group form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox"> Remember me
+                            </label>
+                          </div>
+                          <button type="submit" class="btn btn-primary" onclick="validate()">Log in</button>
+                        </form>
+                        
+                      </div>
+                
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">close</button>
+                      </div>
+                
+                    </div>
+                  </div>
+                </div>
+
+             </div>
+           </article>
+
+          </section>
+
+          <section>
+            <div class="container-fluid">
+              <h1 class="text-capitalize text-center pt-5"> Connect us</h1>
+              <hr class="w-25 mx-auto pb-3">
+
+              
+             <div class="container ">
+               <div class="centerdiv">
+              <a href="https://www.facebook.com/search/top/?q=trip%20management" target="_blank" class="l">
+                <i class="fa fa-2x fa-facebook" aria-hidden="true"></i>
+              </a>  
+
+              <a href="https://www.instagram.com/explore/tags/Tripmanagement/?hl=en" target="_blank" class="l">
+                <i class="fa fa-2x fa-instagram" aria-hidden="true" style="color:#e84393"></i>
+              </a> 
+
+              <a href="https://twitter.com/search?q=trip%20management&src=typed_query" target="_blank" class="l">
+                <i class="fa fa-2x fa-twitter" aria-hidden="true" style="color:#0097e6" ></i>
+              </a> 
+
+              <a href="https://www.youtube.com/results?search_query=trip+management" target="_blank" class="l">
+                <i class="fa fa-2x fa-youtube" aria-hidden="true" style="color:#e84118"></i>
+              </a> 
+
+              <a href="https://www.linkedin.com/company/relovate/about/" target="_blank" class="l">
+                <i class="fa fa-2x fa-linkedin" aria-hidden="true"  style="color:#0097e6" ></i>
+              </a> 
+             </div>
+             </div>
+            </div>
+          </section>
+
+          <center>
+            <table width="130" height="49" border="0" cellspacing="0" cellpadding="0" 
+            background="http://006.free-counters.co.uk/images/Counter/Skins/thanks1.gif">
+            <tr valign="top">
+            <td><div align="left"></div></td>
+            <td><div align="center"></div></td>      
+            <td><div align="right"></div></td></tr>
+            <tr valign="middle">        
+            <td><div align="left"></div></td>        
+            <td><div align="center"></div></td>
+            <td><div align="right"></div></td></tr>      
+            <tr valign="bottom">         
+            <td><div align="left"></div></td>
+            <td><div align="center"> 
+            <img src="http://006.free-counters.co.uk/count-042.pl?count=teams&type=microblacktotalhit&prog=hit" border="0" alt="Free Counters"> 
+            </div></td>      
+            <td><div align="right"></div>         
+            </td></tr></table> 
+            </center>   
+
+          <section>
+
+             <div class="container-fluid row" style="background-color:#faf1ed;" >
+
+                              
+              <p style="font-size: 15px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34px" height="42px" > <image  x="0px" y="0px" width="34px" height="42px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAqCAQAAAB8HUEkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkBQsMNwzOS+4+AAADxklEQVRIx53VXWjWZRjH8c/z35abm+nc2np0GjMDnR4IlSGkEGQ08eVAJKgIDzxwJkWYJyJEhkEYQWFJ6IlhB0EedCCTGRiVMMwQiTIpmi/zddNH9+bL9uzp4Lmf//6Pm251/U9+131f9/e+7ut++aeMbdMs97QFZivHHef97ldH3DRBW2KfXrkxvl77LBkfUO/AmMOT3wH1D0OscGVcRE7OFSuSw1IJ/ZZPi5AX/eGq66hRr8nMot63fTYassnniZAjWp2WcVsZBlWoNl+z5YmYN31RDHneT3HneR/7UZlqZUpCW9agjEHLvGt2HPmCH0YgFc55LHQct023BiVy91UsJatTrQ8tDi3XzXJbmOkjL4bm32wyqOEBhU+pltHqubA/k1Voy2dS73LIqMdrutUbfsgORq6q9bVHQU7a1QgtcWX26FD3UATD6nTYE+fWks/kL3PBP95QaVJRDW4ZwGRTi2p0V7+vzAF/eyqyMCA4pEd5HFiiX5dFNthgkS798U5RrsehoOdaWBpXetgJ0+PZUvoM2mZN8L/ziT6TQ3/OdCcMi8DiSFMI63ApkcewjM0xgjU2yySqVe6SjqCbIjOCvGAgkKHPPOuKCrrOPH2JxQ44H/SMSG2QAwYTkAHzR+3LfAMJb8jdoGojpfECkie0JDHrSHYlCW/k1pVGbgRZoSyBqXJSTxGix0lVRZDC9DciZ4Oco1I2UbiMXUWQXTKJwmdVeTLos6VOBdnoCX+aHs9T57Cs1zWiwwFHPC4V59pnnsagT5U6GtOXOq4mPgmRtO+dUI2Mm9IJREqPpfG4o5FO7cFpVq8/LlgOaSnduqWkQ0se0a9ec/DadUbYG9w6q1wrqkPOJJUqTbrvbblmlbqg9+Y3qtTlcFp6vaJP9ajnKGkpGVW+MQV0SxuKMGRHCJiiRSaxR2NZVkZLQLDDUOHIlLggHZq3atP4wDcl0uGlePMvmyUrHPSs9XHYdg26EhegGNGlwfbYX5/PuhDc5mBQU+10T+8YmEive3aaGvyD2gplKli5C/FlPOh9Mz1SVOCUey56z9rgd5vlToFesDtWx3qtjc7JJqZIyTpnY4xgdQGh6F52uuXloJ9108+mhUlShp31qi1x7Du+HRmYhNAu7Zmgl+nwi2kiKcM6NPsgjvsyUdwx7XDi77/FAiuttMCWROth41qZ9sSArZo02ZpoaVc2PoRHnSnCJBFnwp9vAlZThEkiaiaKyGNOj0Kc/m+I/KKOFSGOTXwhSYu0xojWB9ymCdl+OTn7/z8gb7vtHi/kX1JdaP8UiYWJAAAAAElFTkSuQmCC" />
+              </svg>
+              © 2020 Tripmanagement LLC All rights reserved.
+              </p>
+              <p style="font-size: 12px;">Tripmanagement LLC is not a booking agent or tour operator, and does not charge any service fees to users of our site. Our partners (airlines, travel providers,
+                and booking agents) who list airfare, tours, and travel packages on Tripmanagement are required to include all fees and surcharges in their listed prices.
+                Examples include the Federal September 11th Security Fee, international departure and arrival taxes and fees, federal excise tax, and other service,
+                handling and miscellaneous fees and surcharges. When you book with one of our partners, please be sure to check their site for a full disclosure of all
+                applicable fees as required by the U.S. Department of transportation. Airfares are generally quoted per person in USD unless otherwise noted.
+              </p>  
+              
+              <p style="font-size: 12px;">
+                For your convenience, Tripmanagement LLC calculates an average price for each hotel, which is based on the rates of available rooms obtained from our
+                booking partners. For tours and attractions, the price displayed is usually the lowest available per person adult price. For any travel packages or deals
+                listed, Tripmanagement LLC does not guarantee any specific rates or prices. In addition, average hotel prices are updated nightly and displayed in your
+                preferred currency using prevailing conversion rates. Since these converted prices are estimates, please check with the booking site for the exact amount
+                and currency.
+              </p>
+              
+              <p style="font-size: 12px;">
+                Furthermore, Tripmanagement LLC makes no guarantees for availability of prices advertised on our site. Listed prices may require a stay of a particular length or
+                have blackout dates, qualifications or restrictions.
+              </p>
+              
+              <p style="font-size: 12px;">
+              Tripmanagement LLC is not responsible for content on external web sites. Taxes, fees not included for deals content.
+              Total Visitors:
+                                         
+              </p>
+             </div>
+           
+
+             
+              
+          
+              
+
+          </section>
+
+        
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      
+    </body>
+
+</html>
+
+

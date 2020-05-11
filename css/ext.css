@@ -1,0 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .carousel-inner img
+  {
+      width:1525px;
+      height:675px;
+
+  }
+
+  .centerdiv{
+
+    
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .l  
+  {
+    height: 100px;
+    width: 100px;
+    background-color: #f5f6fa;
+    border-radius: 50px;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 1px 4px 2px #dcdde1;
+    line-height: 100px;
+  }
+
+  .l i
+  {
+    transition : all 0.3s linear; 
+  }
+
+  .l:hover i
+  {
+      transform: scale(1.4);
+  }
+
+  .i
+  {
+    width: 350px;
+    height: 225px;
+  }
+
+ 

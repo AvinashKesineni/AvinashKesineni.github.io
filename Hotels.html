@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bootstrap.min.css">
+
+  <style>
+      .checked {
+  color: rgb(255, 208, 0);
+}
+  </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark pb-3 ">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34px" height="42px" > <image  x="0px" y="0px" width="34px" height="42px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAqCAQAAAB8HUEkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkBQsMNwzOS+4+AAADxklEQVRIx53VXWjWZRjH8c/z35abm+nc2np0GjMDnR4IlSGkEGQ08eVAJKgIDzxwJkWYJyJEhkEYQWFJ6IlhB0EedCCTGRiVMMwQiTIpmi/zddNH9+bL9uzp4Lmf//6Pm251/U9+131f9/e+7ut++aeMbdMs97QFZivHHef97ldH3DRBW2KfXrkxvl77LBkfUO/AmMOT3wH1D0OscGVcRE7OFSuSw1IJ/ZZPi5AX/eGq66hRr8nMot63fTYassnniZAjWp2WcVsZBlWoNl+z5YmYN31RDHneT3HneR/7UZlqZUpCW9agjEHLvGt2HPmCH0YgFc55LHQct023BiVy91UsJatTrQ8tDi3XzXJbmOkjL4bm32wyqOEBhU+pltHqubA/k1Voy2dS73LIqMdrutUbfsgORq6q9bVHQU7a1QgtcWX26FD3UATD6nTYE+fWks/kL3PBP95QaVJRDW4ZwGRTi2p0V7+vzAF/eyqyMCA4pEd5HFiiX5dFNthgkS798U5RrsehoOdaWBpXetgJ0+PZUvoM2mZN8L/ziT6TQ3/OdCcMi8DiSFMI63ApkcewjM0xgjU2yySqVe6SjqCbIjOCvGAgkKHPPOuKCrrOPH2JxQ44H/SMSG2QAwYTkAHzR+3LfAMJb8jdoGojpfECkie0JDHrSHYlCW/k1pVGbgRZoSyBqXJSTxGix0lVRZDC9DciZ4Oco1I2UbiMXUWQXTKJwmdVeTLos6VOBdnoCX+aHs9T57Cs1zWiwwFHPC4V59pnnsagT5U6GtOXOq4mPgmRtO+dUI2Mm9IJREqPpfG4o5FO7cFpVq8/LlgOaSnduqWkQ0se0a9ec/DadUbYG9w6q1wrqkPOJJUqTbrvbblmlbqg9+Y3qtTlcFp6vaJP9ajnKGkpGVW+MQV0SxuKMGRHCJiiRSaxR2NZVkZLQLDDUOHIlLggHZq3atP4wDcl0uGlePMvmyUrHPSs9XHYdg26EhegGNGlwfbYX5/PuhDc5mBQU+10T+8YmEive3aaGvyD2gplKli5C/FlPOh9Mz1SVOCUey56z9rgd5vlToFesDtWx3qtjc7JJqZIyTpnY4xgdQGh6F52uuXloJ9108+mhUlShp31qi1x7Du+HRmYhNAu7Zmgl+nwi2kiKcM6NPsgjvsyUdwx7XDi77/FAiuttMCWROth41qZ9sSArZo02ZpoaVc2PoRHnSnCJBFnwp9vAlZThEkiaiaKyGNOj0Kc/m+I/KKOFSGOTXwhSYu0xojWB9ymCdl+OTn7/z8gb7vtHi/kX1JdaP8UiYWJAAAAAElFTkSuQmCC" />
+            </svg>
+            <a class="navbar-brand" href="#">Trip Management</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="Hotels.html">Hotels</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Restaurant.html">Restaurants</a>
+                  </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Thingstodo.html">Things To Do</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle mr-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    ...More
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="sitemap.html">Sitemap</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="feedback.html">Feed back</a>
+                  </div>
+                </li> 
+
+                
+                
+              </ul>
+              
+            </div>
+          </nav>
+
+
+
+    </header>
+
+
+
+    
+    
+<center>
+    
+    <table style="width: 70%; margin-top:100px" >
+        <tr>
+            <td style="padding: 50px;"> 
+                <div  style="background-color: rgb(255, 226, 251);">
+                    <a href=" image\sps.jfif" target="_blank">
+                      <img src="images\sps.jfif" alt="Lights"  width="1000px" height="500px" style="padding-left: 200px;"></a><br/>
+                      <a href="images\SPS Grand Inn.jfif" target="_blank">
+                        <img src="images\SPS Grand Inn.jfif" alt="Lights"  width="1000px" height="500px"style="padding-left: 200px;"></a><br><br>
+                      <div class="caption" >
+                        <bottom>
+                            <h1 style="color:darkmagenta;font-weight: bolder;"><b>SPS GRAND INN</b></h1>
+                            <h4 style="color: grey;">No.127, Gokhale St, Opposite To Senthilkumaran Theatre, Ram Nagar, Coimbatore</h4>
+                            <h3><b>INR <strike>2250 </strike>INR 1580(Deal applied-Saving INR 670)</b> Per Night</h3>
+                          <br/>
+                           <span style="padding: 10px;background-color: turquoise;width: 120px;border-radius: 10px; ">Doctor on call</span>
+                           <span style="padding: 10px;background-color: turquoise;width: 120px;border-radius: 10px; ">Free Wi-Fi</span>
+                           <span style="padding: 10px;background-color: turquoise;width: 120px;border-radius: 10px; ">Complementary Breakfast</span>
+                           <span style="padding: 10px;background-color: turquoise;width: 120px;border-radius: 10px; ">Chilcare Services</span>
+                           <span style="padding: 10px;background-color: turquoise;width: 120px;border-radius: 10px; ">CCTV & Security</span><br/><br/><br/>
+                          <a href="https://www.makemytrip.com/hotels/hotel-details/?hotelId=201812311219415924&mtkeys=defaultMtkey&_uCurrency=INR&checkin=05252020&checkout=05262020&city=CTCJB&cmp=SEO&country=IN&filterData=HOTEL_PRICE%7C1000-6000&lat=11.015&lng=76.964&locusId=CTCJB&locusType=city&modifyDates=true&rank=6&roomStayQualifier=1e0e&searchText=Coimbatore&seoReq=1588235096281">  <span style="padding: 18px;background-color: chartreuse ;width: 120px;border-radius: 10px;font-size: large; "><b>Proceed to Booking</b></span></a>
+                        </bottom>
+                        <br/><br/>
+                        <h2>Reviews</h2><br/>
+                        <div class="media" >
+                            <div class="media-left">
+                                <img src="images\user.png" width="70px" height="70px" >
+                            </div>
+                            <div class="media-body" >
+                                <h3 class="media-heading">
+                                    <b>Best Hotel Ever</b>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                  
+                                </h3>
+                                <p>Best Hotel Ever Seen in my life. Breakfast was delicious. Room was Very neat and nicely decorated. Staffs were very kind.</p>
+                              </div>
+                        </div>
+                        <div class="media" >
+                            <div class="media-left">
+                                <img src="images\user.png" width="70px" height="70px" >
+                            </div>
+                            <div class="media-body" >
+                                <h3 class="media-heading">
+                                    <b>Restaurant services</b>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star "></span>
+                                    <span class="fa fa-star "></span>
+                                    <span class="fa fa-star "></span>
+                                    <span class="fa fa-star "></span>
+                                  
+                                </h3>
+                                <p>Restaurant service was very slow. Food slightly over price. Breakfast buffet was really bad experience. Nothing was there prepared and no variety. Food tastes average. Room size was very small and suffocating. Bathroom door was congested.</p>
+                              </div>
+                        </div>
+                        <div class="media" >
+                            <div class="media-left">
+                                <img src="images\user.png" width="70px" height="70px" >
+                            </div>
+                            <div class="media-body" >
+                                <h3 class="media-heading">
+                                    <b>Satisfactory</b>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star "></span>
+                                  
+                                </h3>
+                                <p>Everything about our stay at hotel was good. Courteous staff. Neat and clean room. They even upgraded our room to deluxe. Only thing they have to pay attention to is housekeeping. In total it was good and comfortable stay.</p>
+                              </div>
+                        </div>
+                      </div>
+                    
+                  </div>
+                  
+
+            </td>
+        </tr>
+
+
+
+
+        <tr>
+            <td style="padding: 50px;"> 
+                <div class="img-fluid" style="background-color: rgb(255, 226, 251);">
+                    <a href="images\jk1.jfif" target="_blank">
+                      <img src="images\jk1.jfif" alt="Lights"  width="1000px" height="500px" style="padding-left: 200px;" ></a><br/>
+                      <a href="images\JK.jfif" target="_blank">
+                        <img src="images\JK.jfif" alt="Lights"  width="1000px" height="500px" style="padding-left: 200px;"></a>
+                      <div class="caption" >
+                        <bottom>
+                            <h1 style="color:darkmagenta;font-weight: bolder;"><b>JK Hotels</b></h1>
+                            <h4 style="color: grey;">No 451, NSR Rd, SB Mission Post, Kuppakonam Pudur, Saibaba Colony, Tamil Nadu 641011</h4>
+                            <h3><b>INR <strike>2200 </strike>INR 1562(Deal applied-Saving INR 638)</b> Per Night</h3>
+                          <br/>
+                           <span style="padding: 10px;background-color: turquoise;width: 120px;border-radius: 10px; ">Restaurant</span>
+                           <span style="padding: 10px;background-color: turquoise;width: 120px;border-radius: 10px; ">CCTV & Security</span>
+                           <span style="padding: 10px;background-color: turquoise;width: 120px;border-radius: 10px; ">First-aid services</span>
+                           <span style="padding: 10px;background-color: turquoise;width: 120px;border-radius: 10px; ">Airport Transfer (Paid - Private taxi)</span><br/><br/><br/>
+                           <a href="https://www.makemytrip.com/hotels/hotel-details/?hotelId=201811011423573433&mtkeys=defaultMtkey&_uCurrency=INR&checkin=05252020&checkout=05262020&city=CTCJB&cmp=SEO&country=IN&filterData=HOTEL_PRICE%7C1000-6000&lat=11.026378&lng=76.94365&locusId=CTCJB&locusType=city&modifyDates=true&rank=3&roomStayQualifier=1e0e&searchText=Coimbatore&seoReq=1588235096281">  <span style="padding: 18px;background-color: chartreuse ;width: 120px;border-radius: 10px;font-size: large; "><b>Proceed to Booking</b></span></a>
+                        </bottom>
+                        <br/><br/>
+                        <h2>Reviews</h2><br/>
+                        <div class="media" >
+                            <div class="media-left">
+                                <img src="images\user.png" width="70px" height="70px" >
+                            </div>
+                            <div class="media-body" >
+                                <h3 class="media-heading">
+                                    <b>Best Hotel Ever</b>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                  
+                                </h3>
+                                <p>Rooms are spacious and clean. Washrooms are also clean. Staff are polite. Really excellent stay.</p>
+                              </div>
+                        </div>
+                        <div class="media" >
+                            <div class="media-left">
+                                <img src="images\user.png" width="70px" height="70px" >
+                            </div>
+                            <div class="media-body" >
+                                <h3 class="media-heading">
+                                    <b>Poor Behaviour By Staff</b>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star "></span>
+                                    <span class="fa fa-star "></span>
+                                    <span class="fa fa-star "></span>
+                                    <span class="fa fa-star "></span>
+                                  
+                                </h3>
+                                <p>Non compliance with guest not good food.
+
+                                </p>
+                              </div>
+                        </div>
+                        <div class="media" >
+                            <div class="media-left">
+                                <img src="images\user.png" width="70px" height="70px" >
+                            </div>
+                            <div class="media-body" >
+                                <h3 class="media-heading">
+                                    <b>Satisfactory</b>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star "></span>
+                                  
+                                </h3>
+                                <p>Front desk staff were very friendly and accommodative. Restaurant attached was fine. The room rate was very reasonable. Generally quiet. Area is very central. The only cons- One had to request house keeping, breakfast was very basic, AC definitely needs service. Over all, not a bad stay.</p>
+                              </div>
+                        </div>
+                      </div>
+                    
+                  </div>
+                  
+
+            </td>
+        </tr>
+
+
+
+
+
+
+
+
+
+
+        <tr>
+            <td style="padding: 50px;"> 
+                <div class="img-fluid" style="background-color: rgb(255, 226, 251);">
+                    <a href="images\zone.jfif" target="_blank">
+                      <img src="images\zone.jfif" alt="Lights"  width="1000px" height="500px" style="padding-left: 200px;"></a><br/>
+                      <a href="images\zone1.jfif" target="_blank">
+                        <img src="images\zone1.jfif" alt="Lights"  width="1000px" height="500px" style="padding-left: 200px;"></a>
+                      <div class="caption" >
+                        <bottom>
+                            <h1 style="color:darkmagenta;font-weight: bolder;"><b>Zone by The Park Coimbatore
+                            </b></h1>
+                            <h4 style="color: grey;">33/3, Avinashi Rd, Lakshmi Mills, Coimbatore, Tamil Nadu-641018</h4>
+                            <h3><b>INR <strike>3899 </strike>INR 2971(Deal applied-Saving INR 928)</b> Per Night</h3>
+                          <br/>
+                           <span style="padding: 10px;background-color: turquoise;width: 120px;border-radius: 10px; ">Restaurant</span>
+                           <span style="padding: 10px;background-color: turquoise;width: 120px;border-radius: 10px; ">Airport Transfer</span>
+                           <span style="padding: 10px;background-color: turquoise;width: 120px;border-radius: 10px; ">CCTV & Security</span>
+                           <span style="padding: 10px;background-color: turquoise;width: 120px;border-radius: 10px; ">Gym</span><br/><br/><br/>
+                           <a href="https://www.makemytrip.com/hotels/hotel-details/?hotelId=201411271446104298&mtkeys=defaultMtkey&_uCurrency=INR&checkin=05252020&checkout=05262020&city=CTCJB&cmp=SEO&country=IN&filterData=HOTEL_PRICE%7C1000-6000&lat=11.011594&lng=76.98432&locusId=CTCJB&locusType=city&modifyDates=true&rank=13&roomStayQualifier=1e0e&searchText=Coimbatore&seoReq=1588235096281">  <span style="padding: 18px;background-color: chartreuse ;width: 120px;border-radius: 10px;font-size: large; "><b>Proceed to Booking</b></span></a>
+                          </bottom>
+                        <br/><br/>
+                        <h2>Reviews</h2><br/>
+                        <div class="media" >
+                            <div class="media-left">
+                                <img src="images\user.png" width="70px" height="70px" >
+                            </div>
+                            <div class="media-body" >
+                                <h3 class="media-heading">
+                                    <b>Best Hotel Ever</b>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                  
+                                </h3>
+                                <p>Front desk staff are quick to put you at comfort by quick check-in, in-house staff service, etc very prompt. The food in sumptuous and wholesome.</p>
+                              </div>
+                        </div>
+                        <div class="media" >
+                            <div class="media-left">
+                                <img src="images\user.png" width="70px" height="70px" >
+                            </div>
+                            <div class="media-body" >
+                                <h3 class="media-heading">
+                                    <b>Discomfort due to location</b>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star "></span>
+                                    <span class="fa fa-star "></span>
+                                    <span class="fa fa-star "></span>
+                                    <span class="fa fa-star "></span>
+                                  
+                                </h3>
+                                <p>It's right on The main Road, connectivity is good. It overall a good deal.</p>
+                              </div>
+                        </div>
+                        <div class="media" >
+                            <div class="media-left">
+                                <img src="images\user.png" width="70px" height="70px" >
+                            </div>
+                            <div class="media-body" >
+                                <h3 class="media-heading">
+                                    <b>Satisfactory</b>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star "></span>
+                                  
+                                </h3>
+                                <p>It is located in the center of The city with easy accessibility. Good staff and helpful too. Housekeeping can be better.
+
+                                </p>
+                              </div>
+                        </div>
+                      </div>
+                    
+                  </div>
+                  
+
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 50px;"> 
+                <div style="background-color: rgb(255, 226, 251);">
+                    <a href="images\lemon.jfif" target="_blank">
+                      <img src="images\lemon.jfif" alt="Lights"  width="1000px" height="500px" style="padding-left: 200px;"></a><br/>
+                      <a href="images\lemon1.jfif" target="_blank">
+                        <img src="images\lemon1.jfif" alt="Lights"  width="1000px" height="500px" style="padding-left: 200px;"></a>
+                      <div class="caption" >
+                        <bottom>
+                            <h1 style="color:darkmagenta;font-weight: bolder;"><b>Lemon Tree Hotel Coimbatore</b></h1>
+                            <h4 style="color: grey;">Sri Rangulu Naidu Farms 173/3 & 174, 4, 1st Main Road, Kalapatti, Tamil Nadu-641048</h4>
+                            <h3><b>INR <strike>3599 </strike>INR 2731(Deal applied-Saving INR 868)</b> Per Night</h3>
+                          <br/>
+                           <span style="padding: 10px;background-color: turquoise;width: 120px;border-radius: 10px; ">Doctor on call</span>
+                           <span style="padding: 10px;background-color: turquoise;width: 120px;border-radius: 10px; ">Restaurant</span>
+                           <span style="padding: 10px;background-color: turquoise;width: 120px;border-radius: 10px; ">CCTV & Security</span>
+                           <span style="padding: 10px;background-color: turquoise;width: 120px;border-radius: 10px; ">Swimming Pool(Common)</span>
+                           <span style="padding: 10px;background-color: turquoise;width: 120px;border-radius: 10px; ">Free Wi-Fi</span><br/><br/><br/>
+                           <a href="https://www.makemytrip.com/hotels/hotel-details/?hotelId=201711021532161808&mtkeys=defaultMtkey&_uCurrency=INR&checkin=05252020&checkout=05262020&city=CTCJB&cmp=SEO&country=IN&filterData=HOTEL_PRICE%7C1000-6000&lat=11.075283&lng=77.02833&locusId=CTCJB&locusType=city&modifyDates=true&rank=8&roomStayQualifier=1e0e&searchText=Coimbatore&seoReq=1588235096281">  <span style="padding: 18px;background-color: chartreuse ;width: 120px;border-radius: 10px;font-size: large; "><b>Proceed to Booking</b></span></a>
+                        </bottom>
+                        <br/><br/>
+                        <h2>Reviews</h2>
+                        <div class="media" >
+                            <div class="media-left">
+                                <img src="images\user.png" width="70px" height="70px" >
+                            </div>
+                            <div class="media-body" >
+                                <h3 class="media-heading">
+                                    <b>Excellent experience</b>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                  
+                                </h3>
+                                <p>Stay was fantastic, staff was friendly and supportive, rooms were wonderful, neat, clean and amazing and the food was too good, scrumptious.</p>
+                              </div>
+                        </div>
+                        <div class="media" >
+                            <div class="media-left">
+                                <img src="images\user.png" width="70px" height="70px" >
+                            </div>
+                            <div class="media-body" >
+                                <h3 class="media-heading">
+                                    <b>Non professional behavior of some front office executives</b>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star "></span>
+                                    <span class="fa fa-star "></span>
+                                    <span class="fa fa-star "></span>
+                                    <span class="fa fa-star "></span>
+                                  
+                                </h3>
+                                <p>They thinking they are the owner of the property. And ordering the guests, denied some services what they offer in check-in policy. Too much delay in room service. Overall bad experience.</p>
+                              </div>
+                        </div>
+                        <div class="media" >
+                            <div class="media-left">
+                                <img src="images\user.png" width="70px" height="70px" >
+                            </div>
+                            <div class="media-body" >
+                                <h3 class="media-heading">
+                                    <b>Peaceful stay with a country Side feel</b>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star "></span>
+                                  
+                                </h3>
+                                <p>The pricing was reasonable and standards were upto mark. Recommend for families planning a stay.
+
+
+
+                                </p>
+                              </div>
+                        </div>
+                      </div>
+                    
+                  </div>
+                  
+
+            </td>
+        </tr>
+
+
+
+
+
+
+
+    </table>
+</center>
+    
+</body>
+</html>

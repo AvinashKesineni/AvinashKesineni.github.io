@@ -1,0 +1,477 @@
+<html>
+    <head>
+        <title>Thing to do</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="bootstrap.min.css">
+    </head>
+    <style>
+        #div1{
+            background-color: black;
+            color: white;
+            height: 1cm;
+            width: auto;
+            font-size: 30px;
+        }
+        .checked, .fa-star-half-full{
+            color:orange;
+        }
+        #grey1, #grey2, #grey3, #grey4, #grey5, #grey6, #grey7, #grey8, #grey9{
+            font-family: 'Times New Roman';
+            font-weight: bolder;
+        }
+        .l
+        {
+            margin-top: 75px;
+        }
+    </style>
+    <body>
+        <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark pb-3 ">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34px" height="42px" > <image  x="0px" y="0px" width="34px" height="42px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAqCAQAAAB8HUEkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkBQsMNwzOS+4+AAADxklEQVRIx53VXWjWZRjH8c/z35abm+nc2np0GjMDnR4IlSGkEGQ08eVAJKgIDzxwJkWYJyJEhkEYQWFJ6IlhB0EedCCTGRiVMMwQiTIpmi/zddNH9+bL9uzp4Lmf//6Pm251/U9+131f9/e+7ut++aeMbdMs97QFZivHHef97ldH3DRBW2KfXrkxvl77LBkfUO/AmMOT3wH1D0OscGVcRE7OFSuSw1IJ/ZZPi5AX/eGq66hRr8nMot63fTYassnniZAjWp2WcVsZBlWoNl+z5YmYN31RDHneT3HneR/7UZlqZUpCW9agjEHLvGt2HPmCH0YgFc55LHQct023BiVy91UsJatTrQ8tDi3XzXJbmOkjL4bm32wyqOEBhU+pltHqubA/k1Voy2dS73LIqMdrutUbfsgORq6q9bVHQU7a1QgtcWX26FD3UATD6nTYE+fWks/kL3PBP95QaVJRDW4ZwGRTi2p0V7+vzAF/eyqyMCA4pEd5HFiiX5dFNthgkS798U5RrsehoOdaWBpXetgJ0+PZUvoM2mZN8L/ziT6TQ3/OdCcMi8DiSFMI63ApkcewjM0xgjU2yySqVe6SjqCbIjOCvGAgkKHPPOuKCrrOPH2JxQ44H/SMSG2QAwYTkAHzR+3LfAMJb8jdoGojpfECkie0JDHrSHYlCW/k1pVGbgRZoSyBqXJSTxGix0lVRZDC9DciZ4Oco1I2UbiMXUWQXTKJwmdVeTLos6VOBdnoCX+aHs9T57Cs1zWiwwFHPC4V59pnnsagT5U6GtOXOq4mPgmRtO+dUI2Mm9IJREqPpfG4o5FO7cFpVq8/LlgOaSnduqWkQ0se0a9ec/DadUbYG9w6q1wrqkPOJJUqTbrvbblmlbqg9+Y3qtTlcFp6vaJP9ajnKGkpGVW+MQV0SxuKMGRHCJiiRSaxR2NZVkZLQLDDUOHIlLggHZq3atP4wDcl0uGlePMvmyUrHPSs9XHYdg26EhegGNGlwfbYX5/PuhDc5mBQU+10T+8YmEive3aaGvyD2gplKli5C/FlPOh9Mz1SVOCUey56z9rgd5vlToFesDtWx3qtjc7JJqZIyTpnY4xgdQGh6F52uuXloJ9108+mhUlShp31qi1x7Du+HRmYhNAu7Zmgl+nwi2kiKcM6NPsgjvsyUdwx7XDi77/FAiuttMCWROth41qZ9sSArZo02ZpoaVc2PoRHnSnCJBFnwp9vAlZThEkiaiaKyGNOj0Kc/m+I/KKOFSGOTXwhSYu0xojWB9ymCdl+OTn7/z8gb7vtHi/kX1JdaP8UiYWJAAAAAElFTkSuQmCC" />
+            </svg>
+              <a class="navbar-brand" href="#">Trip Management</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item ">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Hotels.html">Hotels</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="Restaurant.html">Restaurants</a>
+                    </li>
+
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#">Things To Do</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      ...More
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="sitemap.html">Sitemap</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="feedback.html">Feedback</a>
+                    </div>
+                  </li>
+
+                  
+                  
+                </ul>
+                
+              </div>
+            </nav>
+
+
+
+      </header>
+
+
+
+
+        <div id="div1">
+            <center class="l">Places To Visit</center>
+        </div>
+        <br><br><br><br><br><br>
+        <div class="jumbotron" style="font-size: 0.5cm;width: auto;">
+            <center>
+            <h1 style="text-decoration: underline;">Things To Do</h1>
+            <a href="#grey1">1. Adiyogi Shiva</a><br>
+            <a href="#grey2">2. Maruthamalai Arulmigu Subramanya Swami Temple</a><br>
+            <a href="#grey3">3. Arulmigu Patteeswar Swamy Temple</a><br>
+            <a href="#grey4">4. Shree Ayyappan Temple</a><br>
+            <a href="#grey5">5. Shree Dhanwantari Temple</a><br>
+            <a href="#grey6">6. Anamalai Tiger Reserve</a><br>
+            <a href="#grey7">7. VOC Park and Zoo</a><br>
+            <a href="#grey8">8. TNAU Botanical Garden</a><br>
+            <a href="#grey9">9. Kovai  Kondattan Amusement Park Pvt Ltd</a><br>
+            </center>
+        </div>
+        <hr><hr>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <hr><hr>
+        <div id="grey1">
+            <div class="container">
+                <center>
+                    <h1 class="col-sm-12"><a style="color: black;text-decoration: underline;" href="https://www.google.com/maps/place/112+Feet+Adiyogi/@17.8835246,70.8817663,3459898m/data=!3m1!1e3!4m8!1m2!2m1!1sadiyogi+!3m4!1s0x3ba8615a0e2734b3:0x7ee7bf2703dc664e!8m2!3d10.9725326!4d76.740475">Adiyogi Shiva</a></h1>
+                    <img class="img-responsive col-12 col-md-6 " style="height: 10cm;" src="https://images.sadhguru.org/sites/default/files/media_files/adiyogi-vital-to-our-times-20170705_063117-02.jpg">
+                
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half-full"></span>
+                    <p>4.8/5</p>
+                    <p class="col-md-6">Reviews:
+                    <ul>
+                        <li>The enormous, yet equanimous Adiyogi is the main draw. Around it is the Yogeshwar Linga, a powerful space with the chant of Yoga Yoga Yogeshwara echoing powerfully. We have the opportunity to go into Surya Kundalam</li>
+                        <hr>
+                        <li>This is a grand idol of Adi yogi Lord Shiva's face. The idol is really beautiful and mesmerizing. It is preferred to view the idol from a distance. Then only it will give full impact. Secondly, if you watch the idol from the right side of the statue, there is a chance that you miss the moon on the fact of the lord.</li>
+                        <hr>
+                        <li>Magnificent sculpture!
+                            Guinness world Record
+                            with Yogeshwar Linga in front
+                            at the foothill of South of Kailash
+                            Most beautiful face on this planet
+                            what else one can ask for?
+                            </li>
+                        <hr>
+                    </ul>
+                    <label>Excellent:</label>
+                    <progress title="90%" value="90" max="100"> 90% </progress><br>
+                    <label>Average: &nbsp;</label>
+                    <progress title="50%" value="50" max="100"> 50% </progress><br>
+                    <label>Bad: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <progress title="3%" value="3" max="100"> 3% </progress><br>
+                    <hr>
+                </p>
+                    <h4 class="col-12 col-sm-12" style="font-weight: bold;">Adiyogi is a 112 foot statue inaugrated by Prime Minister Narendra Modi and Sadhguru. It is based in the foothills of Velliagiri mountains and is a part of Isha Yoga Center. In front of the statue in a mandapam, sadhguru has also consecrated a yogeshwara linga.</h4>
+                    <hr>
+                    <h3 class="col-12 col-sm-12 jumbotron">Location:
+                    <P>
+                        Isha Yoga centre Velliangiri Foothills, Ishana Vihar Post, Coimbatore, Tamil Nadu, 641114, India.
+                        Phone: +91 88888 88888, Website: <a href="https://isha.sadhguru.org/in/en/center/consecrated-spaces/112-feet-adiyogi" style="color: blue;">Click Here</a></P>
+                    </h3>
+                </center>
+            </div>
+        </div>
+        <hr><hr>
+        <div id="grey2">
+            <div class="container">
+                <center>
+                    <h1 class="col-sm-12"><a style="color: black;text-decoration: underline;" href="https://www.google.com/maps/place/Maruthamalai+Arulmigu+Subramanya+Swami+Temple/@11.0466053,76.8493253,17z/data=!4m5!3m4!1s0x3ba85f853e01b50b:0xcbc9bcc157065c67!8m2!3d11.0466053!4d76.851514">Maruthamalai Arulmigu Subramanya Swami Temple</a></h1>
+                    <img class="img-responsive col-12 col-md-6 " style="height: 10cm;" src="https://www.blog.123coimbatore.com/uploads/blog-images/16-04-2019_10-53-29_123Coimbatore-maruthamali-temple-article.jpg">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <p>4.3/5</p>
+                    <p class="col-md-6">Reviews:
+                    <ul>
+                        <li>Marudhamalai temple is an old temple atop the Marudamalai Hills.
+
+                            Marudamalai temple is a dedicated to Lord Murugan.
+                            
+                            Temple trust is operating special bus to reach the temple, and buses are available at the foothills. Beautiful view of coimbatore city can be seen from the top.</li>
+                        <hr>
+                        <li>A steep climb by stairs, a gorgeous view and a serene temple. I am glad I visited. Have the cucumbers offered on the way to keep yourself hydrated.</li>
+                        <hr>
+                        <li>It is a very good temple and once u climb the 108 steps u will feel refreshed and blessed.
+                            The lord Murugan deity there is a good to see and our prayers will be answered if we are devoted to ask in sanctified dignity.</li>
+                        <hr>
+                    </ul>
+                    <label>Excellent:</label>
+                    <progress title="80%" value="80" max="100"> 80% </progress><br>
+                    <label>Average: &nbsp;</label>
+                    <progress title="60%" value="60" max="100"> 60% </progress><br>
+                    <label>Bad: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <progress title="5%" value="5" max="100"> 5% </progress><br>
+                    <hr>
+                </p>
+                    <h4 class="col-12 col-sm-12" style="font-weight: bold;">Hilltop Hindu temple with elaborate carvings, gilded shrines & dramatic valley views.</h4>
+                    <hr>
+                    <h3 class="col-12 col-sm-12 jumbotron">Location:
+                    <P>
+                        12 Km from City Railway Station, Coimbatore, Tamil Nadu, India
+                        Phone: +91 422 242 2490, Website: <a href="http://www.marudhamalaimurugantemple.tnhrce.in/" style="color: blue;">Click Here</a></P>
+                    </h3>
+                </center>
+            </div>
+        </div>
+        <hr><hr>
+        <div id="grey3">
+            <div class="container">
+                <center>
+                    <h1 class="col-sm-12"><a style="color: black;text-decoration: underline;" href="https://www.google.com/maps/place/Arulmigu+Patteeswarar+Swamy+Temple/@10.9760523,76.9127677,17z/data=!4m8!1m2!2m1!1spatteswar+temple+coimbatore!3m4!1s0x3ba85eadaa2e8f65:0x8c098785268a2605!8m2!3d10.9758862!4d76.914608">Arulmigu Patteeswarar Swamy Temple</a></h1>
+                    <img class="img-responsive col-12 col-md-6 " style="height: 10cm;" src="https://media.tacdn.com/media/attractions-splice-spp-360x240/0a/8c/2b/37.jpg">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half-full"></span>
+                    <p>4.5/5</p>
+                    <p class="col-md-6">Reviews:
+                    <ul>
+                        <li>This temple is located on the ISHA(Adiyogi Shiva) route and is famous for Mahashivathiri. This is also a place where shiva and parvathi are the main deities. Govt buses, taxis are available to connect . The architecture is typical cheran, cholan rajan gopuram and pradhikshina.</li>
+                        <hr>
+                        <li>One of the big temples in Coimbatore. Early morning the temple elephant visits and puja is performed. Prasadams are offered to visitors after puja. You also get sweets, savories and variety rices for purchase.</li>
+                        <hr>
+                        <li>This is very famous temple and beautiful too. Many people visit here. Peaceful place. We have visited in morning time.</li>
+                        <hr>
+                    </ul>
+                    <label>Excellent:</label>
+                    <progress title="85%" value="85" max="100"> 85% </progress><br>
+                    <label>Average: &nbsp;</label>
+                    <progress title="35%" value="35" max="100"> 35% </progress><br>
+                    <label>Bad: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <progress title="3%" value="3" max="100"> 3% </progress><br>
+                    <hr>
+                </p>
+                    <h4 class="col-12 col-sm-12" style="font-weight: bold;">9th-century Shiva temple featuring carved pillars, statues & shrines, plus an annual festival.</h4>
+                    <hr>
+                    <h3 class="col-12 col-sm-12 jumbotron">Location:
+                    <P>
+                        Vadapatti - Perur Road, Coimbatore, 641010, Tamil Nadu, India
+                        Phone: +91 422 260 7991, Website: <a href="http://www.perurpatteeswarar.tnhrce.in/poojas-patteeswarar.html" style="color: blue;">Click Here</a></P>
+                    </h3>
+                </center>
+            </div>
+        </div>
+        <hr><hr>
+        <div id="grey4">
+            <div class="container">
+                <center>
+                    <h1 class="col-sm-12"><a style="color: black;text-decoration: underline;" href="https://i2.wp.com/www.rvatemples.com/wp-content/uploads/2018/06/Sree-Ayyappa.jpg?fit=630%2C420&ssl=1">Shree Ayyappan Temple</a></h1>
+                    <img class="img-responsive col-12 col-md-6 " style="height: 10cm;" src="https://i2.wp.com/www.rvatemples.com/wp-content/uploads/2018/06/Sree-Ayyappa.jpg?fit=630%2C420&ssl=1">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half-full"></span>
+                    <p>4.8/5</p>
+                    <p class="col-md-6">Reviews:
+                    <ul>
+                        <li>When entering the temple, couldn't believe that I just got cut off from all chaos of coimbatore city. was feeling very blissfull, perfect kerala temple. it had the sanctity, very cooperative management. clean temple</li>
+                        <hr>
+                        <li>Temple administration strictly as per shastras. Very clean atmosphere. All poojas as per tradition. No parking facility. But can park vehicles in nearby roads. Heart of the city.</li>
+                        <hr>
+                        <li>An Ayyappan temple which holds the sanctity as seen in Kerala. The rituals are tantric in nature - Kerala style.
+                            During the mandalam period this temple will be thronged by Ayyappa Devotees.</li>
+                    </ul>
+                    <hr><br>
+                    <label>Excellent:</label>
+                    <progress title="95%" value="95" max="100"> 95% </progress><br>
+                    <label>Average: &nbsp;</label>
+                    <progress title="25%" value="25" max="100"> 25% </progress><br>
+                    <label>Bad: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <progress title="1%" value="1" max="100"> 1% </progress><br>
+                    <hr>
+                </p>
+                    <h4 class="col-12 col-sm-12" style="font-weight: bold;">A wonderful temple dedicated to Lord Ayyappa. All rituals by qualified and experienced Priests. All poojas are conducted as per rituals followed in Kerala</h4>
+                    <hr>
+                    <h3 class="col-12 col-sm-12 jumbotron">Location:
+                    <P>
+                        Sree Ayyappa Road Sidhapudur, Coimbatore, 641044, Tamil Nadu, India
+                        Phone: +91 422 252 3027, Website: <a href="http://sidhapudurayyappantemple.org/" style="color: blue;">Click Here</a></P>
+                    </h3>
+                </center>
+            </div>
+        </div>
+        <hr><hr>
+        <div id="grey5">
+            <div class="container">
+                <center>
+                    <h1 class="col-sm-12"><a style="color: black;text-decoration: underline;" href="https://www.google.com/maps/place/Sree+Dhanwanthari+Temple/@10.9957091,76.9900372,17z/data=!3m1!4b1!4m5!3m4!1s0x3ba859c1762a9379:0xb55f2d3b9440ff5c!8m2!3d10.9957091!4d76.9922259">Shree Dhanwanthari Temple</a></h1>
+                    <img class="img-responsive col-12 col-md-6 " style="height: 10cm;" src="https://cdn.shopify.com/s/files/1/0851/1516/products/dhanwantari_temple_at_coimbatore_grande.jpeg?v=1430428100">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                    <p>4/5</p>
+                    <p class="col-md-6">Reviews:
+                    <ul>
+                        <li>Wonderful temple of Kerala tradition in Coimbatore. Must visit place. It is located inside of the AVP trust hospital. Best time to visit the temple is early morning and afternoon.</li>
+                        <hr>
+                        <li>The Temple is always full of worshippers. Young and old, from near and afar, offerind thanks and praise, in need and deep suppliation.</li>
+                        <hr>
+                        <li>Calm and Quiet place.. The best time to visit the temple is in the Morning. In some special occasions they do offer Prashad like Pongal which really tastes good! You can click some really good pictures in and around the temple.</li>
+                    </ul><hr>
+                    <br><br>
+                    <label>Excellent:</label>
+                    <progress title="80%" value="80" max="100"> 80% </progress><br>
+                    <label>Average: &nbsp;</label>
+                    <progress title="35%" value="35" max="100"> 35% </progress><br>
+                    <label>Bad: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <progress title="0%" value="0" max="100"> 0% </progress><br>
+                    <hr>
+                </p>
+                    <h4 class="col-12 col-sm-12" style="font-weight: bold;">It is believed that visiting this temple cures our diseases</h4>
+                    <hr>
+                    <h3 class="col-12 col-sm-12 jumbotron">Location:
+                    <p>
+                        Arya Vaidya Pharmacy Road, Olymbus Junction, Coimbatore - 641045, Tamil Nadu, India 
+                        Phone: +91 9605691511
+                    </p>
+                    </h3>
+                </center>
+            </div>
+        </div>
+        <hr><hr>
+        <div id="grey6">
+            <div class="container">
+                <center>
+                    <h1 class="col-sm-12"><a style="color: black;text-decoration: underline;" href="https://www.google.com/maps/place/Anamalai+Tiger+Reserve/@10.424099,77.1233713,17z/data=!3m1!4b1!4m5!3m4!1s0x3ba82a57e32f330b:0x837528b15369b92e!8m2!3d10.424099!4d77.12556?hl=en">Anamalai Tiger Reserve</a></h1>
+                    <img class="img-responsive col-12 col-md-6 " style="height: 10cm;" src="https://1.bp.blogspot.com/-F6xk3WgwBzE/W7VqdBf-xWI/AAAAAAAABBk/iy-bDWtJsnESYvmtUM_sS1szbD03u3P5QCLcBGAs/s1600/images%2B%252838%2529.jpg">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half-full"></span>
+                    <p>3.8/5</p>
+                    <p class="col-md-6">Reviews:
+                    <ul>
+                        <li>From coimbatore we travelled to this flip top or so called anamalai tiger reserve, it was worse. Its 3 hr drive in forest department vechile. 200 per person, it's waste of time, local city zoo has better animals... Pls don't go.. Wasted time..</li>
+                        <hr>
+                        <li>The Tiger reserve can be reached from Pollachi town in Coimbatore district in Tamil Nadu state. Have to travel to Top slip from Pollachi to enter the Tiger reserve.</li>
+                        <hr>
+                        <li>I went to Anamalai Tiger Reserve. A visit to Tamil Nadu will never be complete without visiting the Anamalai Tiger Reserve that has been the constant state's companion since its establishment in the year of 1848. It is great place to go.</li>
+                    </ul><hr>
+                    <br>
+                    <label>Excellent:</label>
+                    <progress title="65%" value="65" max="100"> 65% </progress><br>
+                    <label>Average: &nbsp;</label>
+                    <progress title="75%" value="75" max="100"> 75% </progress><br>
+                    <label>Bad: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <progress title="10%" value="10" max="100"> 10% </progress><br>
+                    <hr>
+                </p>
+                    <h4 class="col-12 col-sm-12" style="font-weight: bold;">The Anamalai Tiger Reserve has a long management history since 1848. It is the erstwhile Coimbatore South Forest division, which was a model forest division for the Madras State. </h4>
+                    <hr>
+                    <h3 class="col-12 col-sm-12 jumbotron">Location:
+                    <P>
+                        Dada, Pollachi Town, Pollachi,642101, Tamil Nadu, India
+                        Phone: +91 +91 4259 238 360, Website: <a href="https://www.atrpollachi.com/" style="color: blue;">Click Here</a></P>
+                    </h3>
+                </center>
+            </div>
+        </div>
+        <hr><hr>
+        <div id="grey7">
+            <div class="container">
+                <center>
+                    <h1 class="col-sm-12"><a style="color: black;text-decoration: underline;" href="https://www.google.com/maps/place/VOC+park+and+zoo/@11.006824,76.9680456,17z/data=!3m1!4b1!4m5!3m4!1s0x3ba859aec843ecf3:0xd9679e1bfce54d45!8m2!3d11.006824!4d76.9702343">VOC Park and Zoo</a></h1>
+                    <img class="img-responsive col-12 col-md-6 " style="height: 10cm;" src="https://lh5.googleusercontent.com/p/AF1QipO8NI0I4cFm3h9z1aCBnE6Nu8vEcRk0gERbxeMq=w408-h306-k-no">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half-full"></span>
+                    <span class="fa fa-star"></span>
+                    <p>3.5/5</p>
+                    <p class="col-md-6">Reviews:
+                    <ul>
+                        <li>If you ignore the cleanliness bit, you would be definitely surprised with the collection they have here.
+                            A bit tiny, and depressing for the inhabitants. Takes roughly an hour, if you go slowly, clicking pictures, reading the placards.
+                            Children will definitely enjoy.
+                            Fairly cheap tickets, didn't try the train ride though.</li>
+                        <hr>
+                        <li>If you have kids please do take them here. There is a good array of animals and birds and it will ensure that you have a morning well spent. There is enough tree cover to make sure that the walk is comfortable. There is a little train ride option as well. And a huge park just outside so that one can play as much as they want after the zoo.</li>
+                        <hr>
+                        <li>Well kept and compact zoo in the middle of the Coimbatore city. Animals range from crocodiles, snakes to a variety of fauna and deers. They also have a nice toy train ride around the park. Best to go with young kids and children.</li>
+                    </ul>
+                    <hr>
+                    <label>Excellent:</label>
+                    <progress title="60%" value="60" max="100"> 60% </progress><br>
+                    <label>Average: &nbsp;</label>
+                    <progress title="85%" value="85" max="100"> 85% </progress><br>
+                    <label>Bad: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <progress title="15%" value="15" max="100"> 15% </progress><br>
+                    <hr>
+                </p>
+                    <h4 class="col-12 col-sm-12" style="font-weight: bold;">Best Place For Children To Play</h4>
+                    <hr>
+                    <h3 class="col-12 col-sm-12 jumbotron">Location:
+                    <P>
+                        24, Jail Road ATT Colony, Gopalapuram, Coimbatore, 641018, Tamil Nadu, India.
+                    </P>
+                    </h3>
+                </center>
+            </div>
+        </div>
+        <hr><hr>
+        <div id="grey8">
+            <div class="container">
+                <center>
+                    <h1 class="col-sm-12"><a style="color: black;text-decoration: underline;" href="https://www.google.com/maps/place/TNAU+Botanical+Garden/@11.0164111,76.9316069,16.1z/data=!4m5!3m4!1s0x3ba858d848c28f17:0x84fd16ea5466538!8m2!3d11.0147932!4d76.9315362">TNAU Botanical Garden</a></h1>
+                    <img class="img-responsive col-12 col-md-6 " style="height: 10cm;" src="https://lh5.googleusercontent.com/p/AF1QipNopylTwXj1mgjaAOIzg57vWvmRXa-GS2qlR4XD=w421-h240-k-no">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half-full"></span>
+                    <p>4.5/5</p>
+                    <p class="col-md-6">Reviews:
+                    <ul>
+                        <li>Good place for family outing... Sometimes . Students of agri university were just catch the butterflies there.. That was their lab work.. That looks nice... No drinking water there.. Park, lawn and trees are well maintained.</li>
+                        <hr>
+                        <li>It is one of the places where most school students used to visit as a part of their study tour. Great atmosphere for nature lovers.</li>
+                        <hr>
+                        <li>Good place to spend time with family under greeny environment.... No nuisance, kids can play at the park and parents can be happily sit and watch the kid with a smile </li>
+                    </ul><hr>
+                    <br><br>
+                    <label>Excellent:</label>
+                    <progress title="95%" value="95" max="100"> 95% </progress><br>
+                    <label>Average: &nbsp;</label>
+                    <progress title="30%" value="30" max="100"> 30% </progress><br>
+                    <label>Bad: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <progress title="5%" value="5" max="100"> 5% </progress><br>
+                    <hr>
+                </p>
+                    <h4 class="col-12 col-sm-12" style="font-weight: bold;"></h4>
+                    <hr>
+                    <h3 class="col-12 col-sm-12 jumbotron">Location:
+                    <P>
+                        Marudhamalai Rd, Tamil Nadu Agricultural University, P N Pudur, 641003, Tamil Nadu, India.
+                        Phone: +91 0422 661 1230
+                        Website: <a href="https://tnau.ac.in" style="color: blue;">Click Here</a>
+                    </P>
+                    </h3>
+                </center>
+            </div>
+        </div>
+        <hr><hr>
+        <div id="grey9">
+            <div class="container">
+                <center>
+                    <h1 class="col-sm-12"><a style="color: black;text-decoration: underline;" href="https://www.google.com/maps/@10.9713064,76.8856436,17z">Kovai Kondattam Amusement Park Pvt. Ltd</a></h1>
+                    <img class="img-responsive col-12 col-md-6 " style="height: 10cm;" src="https://trekkers.in/wp-content/uploads/2019/09/Untitled.png">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <p>4.2/5</p>
+                    <p class="col-md-6">Reviews:
+                    <ul>
+                        <li>A simple amusement park with number of rides. A good spot to spend with families and friends. The total atmosphere is good at there</li>
+                        <hr>
+                        <li>Kids below 5 years will enjoy a lot. Little old theme park, but maintenance is good.</li>
+                        <hr>
+                        <li>Prices are 650 for adults and 550 for kids ... Not much distance from the Gandhipuram... Max 12-15 kms... bus connectivity is there..</li>
+                    </ul><hr>
+                    <br><br><br><br>
+                    <label>Excellent:</label>
+                    <progress title="80%" value="80" max="100"> 80% </progress><br>
+                    <label>Average: &nbsp;</label>
+                    <progress title="30%" value="30" max="100"> 30% </progress><br>
+                    <label>Bad: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <progress title="5%" value="5" max="100"> 5% </progress><br>
+                    <hr>
+                </p>
+                    <h4 class="col-12 col-sm-12" style="font-weight: bold;">A Completely Entertain Resort</h4>
+                    <hr>
+                    <h3 class="col-12 col-sm-12 jumbotron">Location:
+                    <P>
+                        2/347, Siruvani Main Rd, Durga nagar, Kalampalayam, Coimbatore, 641010, Tamil Nadu, India.
+                        Phone: +91 0422 260 6852
+                        Website: <a href="https://www.kovaikondatam.com/" style="color: blue;">Click Here</a>
+                    </P>
+                    </h3>
+                </center>
+            </div>
+        </div>
+        <hr><hr>
+    </body>
+</html>
